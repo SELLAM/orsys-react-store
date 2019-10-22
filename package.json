@@ -1,6 +1,6 @@
 {
   "name": "orsys-react-store",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Store",
   "main": "dist/index.js",
   "scripts": {
