@@ -1,5 +1,5 @@
 import { Store } from 'orsys-store';
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 
 
 export function ReactStore() {
