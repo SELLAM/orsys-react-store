@@ -24,6 +24,22 @@ export function ReactStore() {
         }
     }
 
+
+    RStore.useStore = (path, defaultValue) => {
+        const [state, setState] = useState(RStore.get(path, defaultValue));
+        useEffect(() => {
+            const listener = RStore.subscribe([path], () => {
+                setState(RStore.get(path, defaultValue));
+            })
+            return () => {
+                listener.unsubscribe();
+            }
+        });
+        return [state, value => RStore.set(path, value)];
+    }
+
     return RStore
 }
+
+
 
