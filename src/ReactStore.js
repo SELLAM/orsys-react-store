@@ -3,7 +3,7 @@ import React, { Component, useEffect, useState } from 'react';
 
 
 export function ReactStore() {
-    const RStore = new Store()
+    const RStore = Store()
 
     RStore.connect = (subject, WrappedComponent) => {
         return class extends Component {
@@ -34,7 +34,7 @@ export function ReactStore() {
             return () => {
                 listener.unsubscribe();
             }
-        });
+        }, []);
         return [state, value => RStore.set(path, value)];
     }
 
