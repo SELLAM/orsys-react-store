@@ -24,6 +24,7 @@
   "homepage": "https://github.com/SELLAM/orsys-react-store#readme",
   "dependencies": {
     "lodash": "^4.17.15",
+    "on-change": "^1.6.2",
     "orsys-store": "^1.0.4",
     "react": "^16.10.2"
   },
